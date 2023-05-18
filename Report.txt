@@ -1,0 +1,58 @@
+
+Example for Alpha Beta pruning better than Minimax :
+
+
+Input = "Board: WWxxxxxWWWWBBBBxxBWBxB , Depth: 1"
+
+MinimaxOpening Output = 
+"Board Position: WWWxxxxWWWWxBBBxxBWBxB
+Positions evaluated by static estimation: 20
+MINIMAX estimate: 2"
+
+ABOpening Output  
+"Board Position: WWWxxxxWWWWxBBBxxBWBxB
+Positions evaluated by static estimation: 10
+MINIMAX estimate: 1"
+
+
+
+Input = "Board: WWxxxxxWWWWBBBBxxBWBxB Depth: 1"
+
+MiniMaxGame Output = 
+"Board Position: WWxxxxxWWWWBBBBWxxxBxB
+Positions evaluated by static estimation: 16
+MINIMAX estimate: 991"
+
+ABOpening Output = 
+"Board Position: WWxxxxxWWWWBBBBWxxxBxB
+Positions evaluated by static estimation: 12
+MINIMAX estimate: 941"
+
+To improve the static function: I calculated the number of black potential mills that could be formed by adding a black and because then I can add the count of these potential mills while calculating static estimation of White. In this way the static estimation will give greater weightage to White when White is not allowing black mills to be formed thus White is overpowering Black
+
+
+Input = "Board: WWxxxxxWWWWBBBBxxBWBxB , Depth: 1"
+
+MinimaxOpening Output = 
+"Board Position: WWWxxxxWWWWxBBBxxBWBxB
+Positions evaluated by static estimation: 20
+MINIMAX estimate: 2"
+
+MinimaxOpeningImproved Output  
+"Board Position: WWWxxxxWWWWxBBBxxBWBxB
+Positions evaluated by static estimation: 10
+MINIMAX estimate: 1"
+
+
+
+Input = "Board: WWxxxxxWWWWBBBBxxBWBxB Depth: 1"
+
+MiniMaxGame Output = 
+"Board Position: WWxxxxxWWWWBBBBWxxxBxB
+Positions evaluated by static estimation: 16
+MINIMAX estimate: 991"
+
+MiniMaxGameImproved Output = 
+"Board Position: WWxxxxxWWWWBBBBWxxxBxB
+Positions evaluated by static estimation: 12
+MINIMAX estimate: 941"
